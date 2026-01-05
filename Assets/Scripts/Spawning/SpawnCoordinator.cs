@@ -28,8 +28,9 @@ public class SpawnCoordinator : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(GenerateEnemies());
-        //_enemySpawner.Reset();
-        //_scoreZoneSpawner.Reset();
+        _enemySpawner.Reset();
+        _scoreZoneSpawner.Reset();
+        _bulletSpawner.Reset();
     }
 
     private IEnumerator GenerateEnemies()

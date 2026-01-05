@@ -3,13 +3,15 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     [SerializeField] private float _spawnOffset = 1f;
-
-    private BulletSpawner _bulletSpawner;
+    [SerializeField] private BulletSpawner _bulletSpawner;
 
     public void Shoot(Vector3 direction)
     {
         if (_bulletSpawner == null)
+        {
+            Debug.LogWarning("BulletSpawner is not set for Shooter.");
             return;
+        }
 
         direction.Normalize();
 

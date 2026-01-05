@@ -26,8 +26,6 @@ public class Mover : MonoBehaviour
 
         _maxRotation = Quaternion.Euler(0, 0, _maxRotationZ);
         _minRotation = Quaternion.Euler(0, 0, _minRotationZ);
-
-        Reset();
     }
 
     private void Update()
@@ -57,10 +55,5 @@ public class Mover : MonoBehaviour
 
         direction.Normalize();
         _rigidbody2D.linearVelocity = direction * _baseSpeed;
-
-        if (TryGetComponent(out Bullet _))
-        {
-            Debug.Log("Velocity set: " + _rigidbody2D.linearVelocity);
-        }
     }
 }

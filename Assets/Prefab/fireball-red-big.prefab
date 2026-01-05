@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8053644456257993018}
   - component: {fileID: -1386234602263528421}
   - component: {fileID: -3658579471320290645}
+  - component: {fileID: 331211246495790805}
   m_Layer: 0
   m_Name: fireball-red-big
   m_TagString: Untagged
@@ -165,3 +166,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &331211246495790805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860706049015914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821983d6b51f6484c8b73577f9849c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tapForce: 0
+  _jumpSpeed: 0
+  _rotationSpeed: 0
+  _baseSpeed: 5
+  _maxRotationZ: 0
+  _minRotationZ: 0
