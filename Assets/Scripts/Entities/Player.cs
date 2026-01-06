@@ -66,7 +66,9 @@ public class Player : MonoBehaviour
             _entityAnimator.StartAttackAnimation();
         }
         else
+        {
             _entityAnimator.StopAttackAnimation();
+        }
         
 
         if (_shootTimer > 0f)

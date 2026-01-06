@@ -50,9 +50,11 @@ public class Enemy : MonoBehaviour, ITouchDamager, IRemovable
 
     private IEnumerator ShootRoutine()
     {
+        var wait = new WaitForSeconds(_shootInterval);
+
         while (_isShoot && enabled)
         {
-            yield return new WaitForSeconds(_shootInterval);
+            yield return wait;
             _shooter.Shoot(transform.up);
         }
     }
