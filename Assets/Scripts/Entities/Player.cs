@@ -55,20 +55,23 @@ public class Player : MonoBehaviour
             _mover.Dash();
         }
 
-        if (_inputer.IsAttack && _shootTimer <= 0)
+        if (_inputer.IsAttack)
         {
-            _shootTimer = _shootCooldown;
-            _entityAnimator.StartAttackAnimation();
-            _shooter.Shoot(transform.up);
-        }
-        else
-        {
-            if (_shootTimer > 0f)
+            if (_shootTimer <= 0)
             {
-                _shootTimer -= Time.fixedDeltaTime;
+                _shootTimer = _shootCooldown;
+                _shooter.Shoot(transform.up);
             }
 
+            _entityAnimator.StartAttackAnimation();
+        }
+        else
             _entityAnimator.StopAttackAnimation();
+        
+
+        if (_shootTimer > 0f)
+        {
+            _shootTimer -= Time.fixedDeltaTime;
         }
     }
 
